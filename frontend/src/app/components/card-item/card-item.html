@@ -1,0 +1,12 @@
+<div class="card card-roupa h-100">
+  <div class="img-wrapper">
+    <img [src]="imagem" class="card-img-top" [alt]="nome">
+    <span class="badge-flutuante" *ngIf="badge">{{ badge }}</span>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ nome }}</h5>
+    <p class="card-text">{{ descricao }}</p>
+    <p class="preco mt-auto">R$ {{ preco.toFixed(2) }}</p>
+    <button class="btn btn-dark">Ver detalhes</button>
+  </div>
+</div>

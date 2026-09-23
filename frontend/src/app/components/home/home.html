@@ -1,0 +1,17 @@
+<section class="destaque text-center py-5">
+  <h1 class="display-5 fw-bold">Bem-vindo à {{ nomeVitrine }}</h1>
+  <p class="lead">As melhores peças de roupa com estilo e conforto, direto pra você.</p>
+</section>
+
+<section class="container mb-5">
+  <div class="row">
+    <app-card-item
+      *ngFor="let produto of produtos"
+      [nome]="produto.nome"
+      [descricao]="produto.descricao"
+      [preco]="produto.preco"
+      [imagem]="produto.imagem"
+      [badge]="produto.badge ?? ''">
+    </app-card-item>
+  </div>
+</section>
